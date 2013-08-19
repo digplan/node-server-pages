@@ -1,8 +1,12 @@
+var cache = {};
+
 module.exports = function(req, res){
 		var fs = require('fs');
 		try{
-			var scp = fs.readFileSync('.' + req.url).toString();
-			var t = scp.replace(/<\?\=?([\s\S]*?)\?>/g, function(m, p){
+			res.writeHead(200, {'Content-Type': 'text/html'});
+			var k = '.' + req.url;
+			if(!cache[k]) cache[k] = fs.readFileSync(k).toString();
+			var t = cache[k].replace(/<\?\=?([\s\S]*?)\?>/g, function(m, p){
 				var x = eval(p);
 				return m.match(/<\?\=/) ? x : '';
 			})

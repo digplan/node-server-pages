@@ -1,9 +1,12 @@
 
 My url is <?= req.url ?>
+My url 2 is <?= req.url ?>
 
+<code>
 <?
 	var loc = req.headers['user-agent']; 
-	res.write('Hey there ' + loc); 
+	res.write(loc); 
 ?>
+</code>
 
-More of this at the bottom of the page..
+More of this
