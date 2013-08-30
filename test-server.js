@@ -1,1 +1,1 @@
-require('http').createServer(require('./nsp.js').listen(84);
+require('http').createServer(require('./nsp.js')).listen(84);
