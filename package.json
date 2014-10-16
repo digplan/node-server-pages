@@ -1,0 +1,13 @@
+{
+  "name"          : "nsp",
+  "description"   : "",
+  "url"           : "http://github.com/dpweb/node-server-pages/",
+  "keywords"      : ["util", "nodejs", "express", "web", "html5"],
+  "author"        : "C Borkert <ILIKECHEESE@dpsw.info>",
+  "main": "nsp.js",
+  "repository": {
+  	"type": "git",
+ 	"url": "git://github.com/dpweb/node-server-pages.git"
+  },
+  "version"       : "0.1.0"
+}

@@ -1,8 +1,8 @@
 ````
-require('http').createServer(require('nsp').listen(84);
+require('nsp')(80, '127.0.0.1');
 ````
 
-node.nsp
+index.html
 ````
 My url is <?= req.url ?>
 
