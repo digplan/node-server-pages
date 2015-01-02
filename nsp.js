@@ -19,18 +19,25 @@ function handle(req, res) {
 
   	if(!file) throw Error();
 
+    debug && console.log('evaluating nsp');
+
     var t = file.replace(/<\?\=?([\s\S]*?)\?>/g, function(m, p) {
+      debug && console.log('found script', p);
       var x = eval(p);
-      return m.match(/<\?\=/) ? x : '';
+      debug && console.log('processed to', x);
+      return x;  //m.match(/<\?\=/) ? x : '';
     })
 
     res.writeHead(200, {
       'Content-Type': 'text/html'
     });
 
-    res.end(t);
+    debug && console.log('done', t);
+    res.write(t);
+    res.end();
 
   } catch (e) {
+  	debug && console.log('error', e.message);
   	res.writeHead(404, {
       'Content-Type': 'text/html'
     });
