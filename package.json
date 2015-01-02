@@ -1,13 +1,13 @@
 {
-  "name"          : "nsp",
+  "name"          : "node-server-pages",
   "description"   : "",
-  "url"           : "http://github.com/dpweb/node-server-pages/",
+  "url"           : "http://github.com/digplan/node-server-pages/",
   "keywords"      : ["util", "nodejs", "express", "web", "html5"],
   "author"        : "C Borkert <ILIKECHEESE@dpsw.info>",
   "main": "nsp.js",
   "repository": {
   	"type": "git",
- 	"url": "git://github.com/dpweb/node-server-pages.git"
+ 	"url": "git://github.com/digplan/node-server-pages.git"
   },
-  "version"       : "0.1.1"
+  "version"       : "0.2.0"
 }
