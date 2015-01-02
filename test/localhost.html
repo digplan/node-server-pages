@@ -1,1 +1,6 @@
 test localhost
+
+<?
+    var loc = req.headers['user-agent']; 
+    res.write('Hey there ' + loc); 
+?>
